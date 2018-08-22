@@ -51,7 +51,7 @@ AND membercost < ( 0.20 * monthlymaintenance )
 Write the query without using the OR operator. */
 SELECT *
 FROM country_club.Facilities
-WHERE facid in (0,5)
+WHERE facid in (1,5)
 ;
 
 /* Q5: How can you produce a list of facilities, with each labelled as
@@ -82,7 +82,7 @@ LEFT JOIN country_club.Bookings book
 	ON fac.facid=book.facid
 LEFT JOIN country_club.Members mem
 	ON book.memid=mem.memid
-WHERE upper(name) like '%tennis court%'
+WHERE upper(name) like '%TENNIS COURT%'
 ORDER BY member_name
 ;
 
